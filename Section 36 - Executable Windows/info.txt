@@ -1,0 +1,5 @@
+Pour créer un executable .exe, on se met dans le répertoire du projet et on fait un pyinstaller --onefile leNomDuFichier.py
+
+Ensuite dans le dossier, on va dans dist->leNomDuFichier.exe
+
+Exemple: voir section 35 youtube downloader
