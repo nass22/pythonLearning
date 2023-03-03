@@ -68,10 +68,13 @@ while True:
         break
     
     if dl_filename:
-        f=open(dl_filename, "wb")
-        f.write(datas_recues)
-        f.close()
-        print("Fichier", dl_filename, "téléchargé")
+        if len(datas_recues)== 1 and datas_recues == b" ": # on verifie que la réponse ne soit pas un binaire vide
+            print("Erreur: Le fichier", dl_filename, "n'a pas été trouvé")
+        else:
+            f=open(dl_filename, "wb")
+            f.write(datas_recues)
+            f.close()
+            print("Fichier", dl_filename, "téléchargé")
         dl_filename = None
     else:
         print(datas_recues.decode())
